@@ -5,38 +5,38 @@ $command, command arguments, more command arguments, ect
 -	You must put a comma followed by a space before you enter the next argument, do not include commas in your arguments. If the argument is for a command name, try not to use spaces, it can sometimes cause the program to save the wrong command name.
 
 ## General Commands (Commands anyone can access all of  time):
-$ping – return a message if the bot is active
-$admins – return a list of all users and roles with admin privileges
-$id – Return the id of the user
-$all ids – Returns the ids of the users roles
-$running – returns a list of all running processes (that were stated by the program)
+$ping – return a message if the bot is active <br/>
+$admins – return a list of all users and roles with admin privileges <br/>
+$id – Return the id of the user <br/>
+$all ids – Returns the ids of the users roles <br/>
+$running – returns a list of all running processes (that were stated by the program) <br/>
 
 ## General Admin Commands (Commands administrators can access all the time):
-$kill all – Kills all programs that were started by the bot
-$restart DAB – Restarts the bot and kills all of the programs that it opened
-$kill DAB – Kills the bot and all programs that it opened
-$is logging – Returns True if the program is logging deleted messages
-$del log – Deletes the log file (Can only be done by the “main” admin)
-$disable logging – Disables the logging of deleted messages (Can only be done by the “main” admin)
-$enable logging – Enables the logging of deleted messages (Can only be done by the “main” admin)
-$lock – Prevents synchronous commands (one at a time, in order) from being run by telling the program that one is progress 
-$unlock – Allows commands to be executed asynchronous, it unlocks the bot
+$kill all – Kills all programs that were started by the bot <br/>
+$restart DAB – Restarts the bot and kills all of the programs that it opened <br/>
+$kill DAB – Kills the bot and all programs that it opened<br/>
+$is logging – Returns True if the program is logging deleted messages<br/>
+$del log – Deletes the log file (Can only be done by the “main” admin) <br/>
+$disable logging – Disables the logging of deleted messages (Can only be done by the “main” admin) <br/>
+$enable logging – Enables the logging of deleted messages (Can only be done by the “main” admin) <br/>
+$lock – Prevents synchronous commands (one at a time, in order) from being run by telling the program that one is progress <br/>
+$unlock – Allows commands to be executed asynchronous, it unlocks the bot<br/>
 
 
 ## Synchronous Admin Commands (Commands that must be run one at a time that need admin permission):
-$add admin, id – Adds a user id or role to the list of admin ids (id is the argument)
-$remove admin, id – Removes that id from the list of admins, it can’t remove the “main” admin
-$cmd, commad1, commad2, ect – This command takes your command(s) and feeds them right into the terminal of the host computer and sends you the output. Each command entered as an argument will be run after the first if the first one succeeds. For example $cmd, echo hi – outputs “hi”, $cmd, cd some-folder-name, dir – will print out the contents of that folder.
-$savec, command name, id1, id2, ect – This command saves the last $cmd command that was run. The command name will be the name that you will use to refer back to it later, do not include spaces in it as it occasionally throws an error. The rest of the arguments are the user ids or id’s of the roles that the users who are aloud to use the command. If you want it accessible by everyone just enter “all” as the argument for id. Only administrators can add, modify or remove a command. Think the following commands like $saved cmd command, argument
-$saved, run – runs the command (if the user is authorised)
-$saved $cmd command, del – Deletes the command that was saved using $savec
-$gr, name, link to repo, file name, id1, id2, ect -  This clones a repostoiy form GitHub using git and saves it so the program can access it. Name is the name of the command that you will use to interact with the program later, the second argument is the exact link to the GitHb repository, the third argument is the name of the file that will be run. This file must be a python file (.py) and can’t contain any spaces. If the program requires libraries you can install them using $cmd. If the program runs off a pipenv the program will automatically handle it. The forth and last argument are the ids of the uses / roles who will be able to access it. Just like before you can add “all” to the list of ids and everyone will be able to access the command. Also, just like before, it’s $command name, argument. Anyone who has access to the command will be able to delete, restart, reinstall and check to see if the program is running.
+$add admin, id – Adds a user id or role to the list of admin ids (id is the argument) <br/>
+$remove admin, id – Removes that id from the list of admins, it can’t remove the “main” admin<br/>
+$cmd, commad1, commad2, ect – This command takes your command(s) and feeds them right into the terminal of the host computer and sends you the output. Each command entered as an argument will be run after the first if the first one succeeds. For example $cmd, echo hi – outputs “hi”, $cmd, cd some-folder-name, dir – will print out the contents of that folder.<br/>
+$savec, command name, id1, id2, ect – This command saves the last $cmd command that was run. The command name will be the name that you will use to refer back to it later, do not include spaces in it as it occasionally throws an error. The rest of the arguments are the user ids or id’s of the roles that the users who are aloud to use the command. If you want it accessible by everyone just enter “all” as the argument for id. Only administrators can add, modify or remove a command. Think the following commands like $saved cmd command, argument<br/>
+$saved, run – runs the command (if the user is authorised) <br/>
+$saved $cmd command, del – Deletes the command that was saved using $savec<br/>
+$gr, name, link to repo, file name, id1, id2, ect -  This clones a repostoiy form GitHub using git and saves it so the program can access it. Name is the name of the command that you will use to interact with the program later, the second argument is the exact link to the GitHb repository, the third argument is the name of the file that will be run. This file must be a python file (.py) and can’t contain any spaces. If the program requires libraries you can install them using $cmd. If the program runs off a pipenv the program will automatically handle it. The forth and last argument are the ids of the uses / roles who will be able to access it. Just like before you can add “all” to the list of ids and everyone will be able to access the command. Also, just like before, it’s $command name, argument. Anyone who has access to the command will be able to delete, restart, reinstall and check to see if the program is running.<br/>
 
-$saved $gr command, run – Runs the file specified from the $gr command in the file name section. It if needs a pipenv, the program will automatically detect it and use it
-$saved $gr command, kill – Kills the program is it’s running
-$saved $gr command, restart – restarts the program
-$saved $gr command, active – Tells you if the program is currently active
-$saved $gr command, del – Deletes the command and the repository from the server
-$saved $gr command, reinstall – Wipes then reinstall the program, useful if you updated the GitHub repository
+$saved $gr command, run – Runs the file specified from the $gr command in the file name section. It if needs a pipenv, the program will automatically detect it and use it<br/>
+$saved $gr command, kill – Kills the program is it’s running<br/>
+$saved $gr command, restart – restarts the program<br/>
+$saved $gr command, active – Tells you if the program is currently active<br/>
+$saved $gr command, del – Deletes the command and the repository from the server<br/>
+$saved $gr command, reinstall – Wipes then reinstall the program, useful if you updated the GitHub repository<br/>
 
 
