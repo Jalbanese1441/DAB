@@ -1,17 +1,17 @@
-#DAB
+# DAB
 DAB - Discord or Desktop Access Bot is a Discord bot that allows multiple users to send commands to a sever. These commands can range from entering commands remotely into the serves terminal to remotely deploying and maintaining a program using GitHub. This program was made using python 3.9.2 and is designed to run on Windows 10. I choose the language and operation system to maximise the number of people who could use this bot. The only requirements are that you have Git installed and you download the Discord python library (https://pypi.org/project/discord.py/), Do Not use a pipenv to run the bot in. I may update this bot in the future to improve efficiency but that is still to be determined. For now, read the docs below to see all of the awesome things that this bot can do. The bot executes certain commands in order (synchronously) to prevent errors. Also, each command has a permission level that the user must meat to use that command, you can use discord roles as well as individual user ids to manages the command permissions. The bot also logs all deleted messages so you can see all of the commands entered into the bot. The Discord id that you enter in at the start of the program will always be the “main” or “head” id. It can never be demoted from admin. For a more in-depth explanation and to learn the inner workings of the program, take a look at the comments in the code.  Only allow people who you trust to have access to any admin command – Never give it to strangers.
 The bot working like this:
 $command, command arguments, more command arguments, ect
 -	You must put a comma followed by a space before you enter the next argument, do not include commas in your arguments. If the argument is for a command name, try not to use spaces, it can sometimes cause the program to save the wrong command name.
 
-##General Commands (Commands anyone can access all of  time):
+## General Commands (Commands anyone can access all of  time):
 $ping – return a message if the bot is active
 $admins – return a list of all users and roles with admin privileges
 $id – Return the id of the user
 $all ids – Returns the ids of the users roles
 $running – returns a list of all running processes (that were stated by the program)
 
-##General Admin Commands (Commands administrators can access all the time):
+## General Admin Commands (Commands administrators can access all the time):
 $kill all – Kills all programs that were started by the bot
 $restart DAB – Restarts the bot and kills all of the programs that it opened
 $kill DAB – Kills the bot and all programs that it opened
@@ -23,7 +23,7 @@ $lock – Prevents synchronous commands (one at a time, in order) from being run
 $unlock – Allows commands to be executed asynchronous, it unlocks the bot
 
 
-##Synchronous Admin Commands (Commands that must be run one at a time that need admin permission):
+## Synchronous Admin Commands (Commands that must be run one at a time that need admin permission):
 $add admin, id – Adds a user id or role to the list of admin ids (id is the argument)
 $remove admin, id – Removes that id from the list of admins, it can’t remove the “main” admin
 $cmd, commad1, commad2, ect – This command takes your command(s) and feeds them right into the terminal of the host computer and sends you the output. Each command entered as an argument will be run after the first if the first one succeeds. For example $cmd, echo hi – outputs “hi”, $cmd, cd some-folder-name, dir – will print out the contents of that folder.
